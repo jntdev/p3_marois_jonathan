@@ -172,37 +172,6 @@ header img {
   color: green;
 }
 
-#Footer_title {
-  color: white;
-  font-size: 22px;
-  font-family: "Shrikhand";
-}
-
-.rotate {
-  transform: rotate(-45deg);
-}
-
-footer {
-  padding: 8%;
-  background-color: #3a3a3a;
-}
-footer ul {
-  padding: 0;
-  margin: 0;
-}
-footer li {
-  color: white;
-  list-style: none;
-  margin-top: 15px;
-}
-footer li a {
-  font-size: 17px;
-  color: white;
-}
-footer i {
-  width: 20px;
-}
-
 .title {
   padding: 6% 3%;
   font-family: "Shrikhand";
@@ -236,6 +205,37 @@ main img {
   border-radius: 20px;
   padding: 2%;
   margin-bottom: 30px;
+}
+
+#Footer_title {
+  color: white;
+  font-size: 22px;
+  font-family: "Shrikhand";
+}
+
+.rotate {
+  transform: rotate(-45deg);
+}
+
+footer {
+  padding: 8%;
+  background-color: #3a3a3a;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+footer li {
+  color: white;
+  list-style: none;
+  margin-top: 15px;
+}
+footer li a {
+  font-size: 17px;
+  color: white;
+}
+footer i {
+  width: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

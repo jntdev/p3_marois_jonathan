@@ -6,14 +6,16 @@
 @import "base/rules";
 @import "components/button";
 
-// -----------Page Principale-----------
+// -----------Header-----------
 
 @import "layout/header";
+
+// -----------Page Principale-----------
+
 @import "pages/acceuil/sections/localisation";
 @import "pages/acceuil/sections/discover_index";
 @import "pages/acceuil/sections/fonctionnement_index";
 @import "pages/acceuil/sections/restaurant_list";
-@import "layout/footer";
 
 // -----------Page restaurant-----------
 
@@ -22,3 +24,7 @@
 @import "pages/restaurant/hero";
 @import "pages/restaurant/menu_section";
 @import "components/menu_card";
+
+// -----------Footer-----------
+
+@import "layout/footer";
