@@ -1,5 +1,24 @@
 //./dart-sass/sass ./style/sass/style.scss ./style/css/style.css --watch
 
-@import "variables";
-@import "cards";
-@import "button";
+@import "abstracts/variables/colors";
+@import "abstracts/variables/box";
+@import "abstracts/variables/typography";
+@import "base/rules";
+@import "components/button";
+
+// -----------Page Principale-----------
+
+@import "layout/header";
+@import "pages/acceuil/sections/localisation";
+@import "pages/acceuil/sections/discover_index";
+@import "pages/acceuil/sections/fonctionnement_index";
+@import "pages/acceuil/sections/restaurant_list";
+@import "layout/footer";
+
+// -----------Page restaurant-----------
+
+@import "pages/restaurant/title";
+@import "pages/restaurant/mainsection";
+@import "pages/restaurant/hero";
+@import "pages/restaurant/menu_section";
+@import "components/menu_card";

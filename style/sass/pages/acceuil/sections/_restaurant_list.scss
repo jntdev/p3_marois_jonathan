@@ -1,0 +1,15 @@
+.restaurant {
+  background: $greyColor;
+  padding: 7% 6%;
+
+  h2 {
+    padding: 6% 0;
+  }
+  .restaurant_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@import "../../../components/restaurant_card";
