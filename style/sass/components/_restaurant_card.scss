@@ -1,3 +1,8 @@
+.restaurantLink {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
 .restaurant_card {
   position: relative;
   width: 100%;
@@ -9,7 +14,7 @@
   flex-direction: column;
   margin-bottom: 30px;
 
-  img {
+  .restaurant_img {
     border-radius: 20px 20px 0 0;
     height: 70%;
     object-fit: cover;
@@ -18,16 +23,34 @@
   .bottom_card {
     display: flex;
     flex-direction: column;
+    position: relative;
     padding: 4%;
     p {
       margin: 0;
     }
     i {
-      align-self: flex-end;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      position: absolute;
+      width: 20%;
+      height: 40px;
+      right: 2px;
+      text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
+        1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+      color: white;
+    }
+    i:hover {
+      //color: $secondaryColor;
+      background: linear-gradient($secondaryColor, $primarycolor);
     }
   }
-  // i{
-  //   align-self: flex-end
-  // }
 }
 @import "label";
+
+@media screen and (min-width: 640px) {
+  .restaurant_card {
+    width: 350px;
+  }
+}

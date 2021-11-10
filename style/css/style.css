@@ -68,6 +68,11 @@ header img {
   border: none;
 }
 
+@media screen and (min-width: 640px) {
+  .with_aside {
+    padding: 5%;
+  }
+}
 .discover {
   display: flex;
   flex-direction: column;
@@ -81,6 +86,18 @@ header img {
   color: white;
 }
 
+@media screen and (min-width: 640px) {
+  .discover {
+    border-radius: 25px;
+    padding: 5% 10%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .discover button {
+    margin-top: 0;
+    padding: 2%;
+  }
+}
 .fonctionnement {
   padding: 8% 2%;
 }
@@ -98,13 +115,14 @@ header img {
   width: 85%;
   padding: 3% 3%;
   border-radius: 25px;
-  justify-content: center;
+  align-items: center;
   display: flex;
   margin-bottom: 25px;
   box-shadow: 5px 5px 15px -4px #0000002d;
 }
 .fonctionnement .notice_card p {
-  font-size: 20px;
+  width: 80%;
+  font-size: 18px;
   font-weight: bold;
 }
 .fonctionnement .notice_card span {
@@ -120,7 +138,31 @@ header img {
   left: -10px;
   top: 30px;
 }
+.fonctionnement .notice_card i {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+.fonctionnement .selected_card {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.fonctionnement .selected_card i {
+  color: #9356dc;
+}
 
+@media screen and (min-width: 640px) {
+  .fonctionnement {
+    padding: 2%;
+  }
+  .fonctionnement .notice_cards_container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .fonctionnement .notice_card {
+    padding: 1%;
+    width: 25%;
+  }
+}
 .restaurant {
   background: #f7f7f7;
   padding: 7% 6%;
@@ -134,6 +176,12 @@ header img {
   align-items: center;
 }
 
+.restaurantLink {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
 .restaurant_card {
   position: relative;
   width: 100%;
@@ -145,7 +193,7 @@ header img {
   flex-direction: column;
   margin-bottom: 30px;
 }
-.restaurant_card img {
+.restaurant_card .restaurant_img {
   border-radius: 20px 20px 0 0;
   height: 70%;
   object-fit: cover;
@@ -154,24 +202,55 @@ header img {
 .restaurant_card .bottom_card {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding: 4%;
 }
 .restaurant_card .bottom_card p {
   margin: 0;
 }
 .restaurant_card .bottom_card i {
-  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: absolute;
+  width: 20%;
+  height: 40px;
+  right: 2px;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  color: white;
+}
+.restaurant_card .bottom_card i:hover {
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 .label {
   top: 15px;
   right: 15px;
-  padding: 3% 6%;
+  padding: 2% 4%;
   background: #99e2d0;
   position: absolute;
   color: green;
 }
 
+@media screen and (min-width: 640px) {
+  .restaurant_card {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .restaurant {
+    padding: 2%;
+  }
+  .restaurant h2 {
+    padding: 2%;
+  }
+  .restaurant .restaurant_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .title {
   padding: 6% 3%;
   font-family: "Shrikhand";
@@ -180,9 +259,12 @@ header img {
   align-items: center;
   justify-content: space-around;
 }
+.title h1 {
+  font-weight: 100;
+}
 
 .mainsection {
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
   background: #f3f3f3;
   display: flex;
   flex-direction: column;
@@ -195,11 +277,11 @@ main img {
 }
 
 .menu_section {
+  width: 100%;
   padding: 5% 0;
 }
 
 .menu_card {
-  width: 100%;
   height: 100px;
   box-shadow: 3px -1px 15px -2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;

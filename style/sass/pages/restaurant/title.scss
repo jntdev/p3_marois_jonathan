@@ -1,9 +1,11 @@
 .title {
   padding: 6% 3%;
   font-family: $secondfontfamily;
-  //font-weight: 300;
   font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  h1 {
+    font-weight: 100;
+  }
 }
