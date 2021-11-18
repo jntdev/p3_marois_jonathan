@@ -21,29 +21,41 @@
     object-position: 50% 100%;
   }
   .bottom_card {
+    height: 30%;
     display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 4%;
-    p {
-      margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      width: 60%;
+      text-decoration: none;
+      color: black;
+      div {
+        padding: 4%;
+        p {
+          margin: 0;
+        }
+      }
     }
     i {
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 25px;
-      position: absolute;
+
       width: 20%;
-      height: 40px;
+      height: 100%;
       right: 2px;
-      text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black,
-        1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-      color: white;
+
+      color: rgb(141, 141, 141);
     }
     i:hover {
-      //color: $secondaryColor;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
       background: linear-gradient($secondaryColor, $primarycolor);
+
+      //color: $secondaryColor;
     }
   }
 }

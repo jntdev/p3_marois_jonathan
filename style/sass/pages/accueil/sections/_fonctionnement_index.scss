@@ -17,9 +17,6 @@
     border-radius: 25px;
     align-items: center;
     display: flex;
-
-    // align-items: center;
-    // justify-content: space-around;
     margin-bottom: 25px;
     box-shadow: 5px 5px 15px -4px #0000002d;
 
@@ -47,7 +44,7 @@
       width: 30%;
     }
   }
-  .selected_card {
+  .notice_card:hover {
     background-color: transparentize($primarycolor, 0.9);
     i {
       color: $primarycolor;
