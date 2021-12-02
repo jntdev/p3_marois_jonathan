@@ -2,6 +2,10 @@ header {
   display: flex;
   justify-content: center;
   padding: 5%;
+  .arrowback{
+    align-self: baseline;
+    justify-self: flex-start;
+  }
   img {
     width: 55%;
   }

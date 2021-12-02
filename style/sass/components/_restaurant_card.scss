@@ -37,25 +37,44 @@
         }
       }
     }
-    i {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    .empty {
+      position: absolute;
+      color: black;
+      background: white;
+      display: block;
+      z-index: 3; 
+      right: 25px;
+      bottom: 25px;
       font-size: 25px;
-
-      width: 20%;
-      height: 100%;
-      right: 2px;
-
-      color: rgb(141, 141, 141);
+      
     }
-    i:hover {
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background: linear-gradient($secondaryColor, $primarycolor);
 
-      //color: $secondaryColor;
+    .full {
+      position: absolute;
+      right: 25px;
+      bottom: 23px;
+      display: none;
+      font-size: 25px;
+      background: -webkit-linear-gradient($secondaryColor, $primarycolor);
+      background-clip: content-box;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: unset;
+    }
+
+    .divheart:hover {
+      
+      cursor: pointer;
+      .full {
+        display: block;
+        transition-timing-function: ease-in;
+      }
+      .empty {
+        display: none;
+        transition-timing-function: ease-in;
+      }
     }
   }
 }

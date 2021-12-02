@@ -50,6 +50,10 @@ header {
   justify-content: center;
   padding: 5%;
 }
+header .arrowback {
+  align-self: baseline;
+  justify-self: flex-start;
+}
 header img {
   width: 55%;
 }
@@ -82,7 +86,7 @@ header img {
 }
 @media screen and (min-width: 640px) {
   .with_aside {
-    padding: 5%;
+    padding: 2%;
   }
 }
 .discover {
@@ -121,7 +125,7 @@ header img {
   padding: 8% 2%;
 }
 .fonctionnement h2 {
-  padding: 8% 3%;
+  padding: 8% 4%;
 }
 .fonctionnement .notice_cards_container {
   display: flex;
@@ -171,7 +175,7 @@ header img {
 
 @media screen and (min-width: 640px) {
   .fonctionnement {
-    padding: 2%;
+    padding: 0;
   }
   .fonctionnement .notice_cards_container {
     flex-direction: row;
@@ -181,13 +185,16 @@ header img {
     padding: 1%;
     width: 25%;
   }
+  .fonctionnement h2 {
+    padding: 8% 0;
+  }
 }
 .restaurant {
   background: #f7f7f7;
   padding: 7% 6%;
 }
 .restaurant h2 {
-  padding: 6% 0;
+  padding: 40px 0;
 }
 .restaurant .restaurant_list {
   display: flex;
@@ -236,21 +243,39 @@ header img {
 .restaurant_card .bottom_card a div p {
   margin: 0;
 }
-.restaurant_card .bottom_card i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.restaurant_card .bottom_card .empty {
+  position: absolute;
+  color: black;
+  background: white;
+  display: block;
+  z-index: 3;
+  right: 25px;
+  bottom: 25px;
   font-size: 25px;
-  width: 20%;
-  height: 100%;
-  right: 2px;
-  color: #8d8d8d;
 }
-.restaurant_card .bottom_card i:hover {
-  color: transparent;
-  background-clip: text;
+.restaurant_card .bottom_card .full {
+  position: absolute;
+  right: 25px;
+  bottom: 23px;
+  display: none;
+  font-size: 25px;
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  background-clip: content-box;
   -webkit-background-clip: text;
-  background: linear-gradient(#ff79da, #9356dc);
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: unset;
+}
+.restaurant_card .bottom_card .divheart:hover {
+  cursor: pointer;
+}
+.restaurant_card .bottom_card .divheart:hover .full {
+  display: block;
+  transition-timing-function: ease-in;
+}
+.restaurant_card .bottom_card .divheart:hover .empty {
+  display: none;
+  transition-timing-function: ease-in;
 }
 
 .label {
@@ -271,22 +296,20 @@ header img {
   .restaurant {
     padding: 2%;
   }
-  .restaurant h2 {
-    padding: 2%;
-  }
   .restaurant .restaurant_list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 .title {
   padding: 6% 3%;
   font-family: "Shrikhand";
+  width: 95%;
   font-size: 22px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .title h1 {
   font-weight: 100;
@@ -294,10 +317,16 @@ header img {
 
 .mainsection {
   border-radius: 30px 30px 0 0;
-  background: #f3f3f3;
+  background: #faf9f9;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.mainsection button {
+  color: white;
+  padding: 4% 13%;
+  margin-bottom: 60px;
 }
 
 main img {
@@ -307,15 +336,52 @@ main img {
 
 .menu_section {
   width: 100%;
-  padding: 5% 0;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_section h2 {
+  align-self: flex-start;
+  font-weight: 300;
+  font-size: 20px;
+}
+.menu_section hr {
+  width: 15%;
+  height: 3px;
+  border: none;
+  background: #99e2d0;
+  align-self: flex-start;
+  margin-bottom: 20px;
 }
 
 .menu_card {
-  height: 100px;
+  background: white;
+  width: 100%;
+  height: 60px;
   box-shadow: 3px -1px 15px -2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 2%;
+  padding: 3%;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.menu_card .menu_info {
+  width: 90%;
+  align-items: center;
+}
+.menu_card .menu_info h3 {
+  font-weight: 550;
+  padding: 0;
+  margin: 0;
+}
+.menu_card .menu_info p {
+  font-weight: 100;
+  padding: 5px 0;
+  margin: 0;
+}
+.menu_card span {
+  align-self: flex-end;
 }
 
 #Footer_title {

@@ -3,7 +3,7 @@
   padding: 7% 6%;
 
   h2 {
-    padding: 6% 0;
+    padding: 40px 0;
   }
   .restaurant_list {
     display: flex;
@@ -17,13 +17,13 @@
 @media screen and (min-width: 640px) {
   .restaurant {
     padding: 2%;
-    h2 {
-      padding: 2%;
-    }
+  
     .restaurant_list {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
+      
     }
   }
 }
+
