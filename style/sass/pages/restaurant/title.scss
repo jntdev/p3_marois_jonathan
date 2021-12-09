@@ -1,12 +1,53 @@
 .title {
-  padding: 6% 3%;
+  background-color: $greyColor;
+  border-radius: 30px 30px 0 0;
+  padding: 25px 3%;
   font-family: $secondfontfamily;
-  width: 95%;
   font-size: 22px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   h1 {
     font-weight: 100;
   }
+  .divheart{
+    width: 5%;
+  }
+  .empty {
+    position: absolute;
+    color: black;
+    background: white;
+    display: block;
+    bottom: 39px;
+    right: 22px;
+    z-index: 3; 
+    font-size: 25px;
+    
+  }
+  .full {
+    position: absolute;
+    display: none;
+    font-size: 25px;
+    bottom: 36px;
+    right: 22px;
+    background: -webkit-linear-gradient($secondaryColor, $primarycolor);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: unset;
+  }
+
+  .divheart:hover {
+    
+    cursor: pointer;
+    .full {
+      display: block;
+      transition-timing-function: ease-in;
+    }
+    .empty {
+      display: none;
+      transition-timing-function: ease-in;
+    }}
 }

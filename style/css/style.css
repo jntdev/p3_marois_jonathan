@@ -48,13 +48,16 @@ button {
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 5%;
 }
 header .arrowback {
-  align-self: baseline;
-  justify-self: flex-start;
+  color: black;
+  margin-right: auto;
+  font-size: 20px;
 }
 header img {
+  margin-right: auto;
   width: 55%;
 }
 
@@ -92,7 +95,7 @@ header img {
 .discover {
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
+  background-color: #faf9f9;
   align-items: center;
   padding: 15% 10%;
   text-align: center;
@@ -133,7 +136,7 @@ header img {
   align-items: center;
 }
 .fonctionnement .notice_card {
-  background: #f7f7f7;
+  background: #faf9f9;
   position: relative;
   width: 85%;
   padding: 3% 3%;
@@ -190,7 +193,7 @@ header img {
   }
 }
 .restaurant {
-  background: #f7f7f7;
+  background: #faf9f9;
   padding: 7% 6%;
 }
 .restaurant h2 {
@@ -303,10 +306,12 @@ header img {
   }
 }
 .title {
-  padding: 6% 3%;
+  background-color: #faf9f9;
+  border-radius: 30px 30px 0 0;
+  padding: 25px 3%;
   font-family: "Shrikhand";
-  width: 95%;
   font-size: 22px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -314,9 +319,45 @@ header img {
 .title h1 {
   font-weight: 100;
 }
+.title .divheart {
+  width: 5%;
+}
+.title .empty {
+  position: absolute;
+  color: black;
+  background: white;
+  display: block;
+  bottom: 39px;
+  right: 22px;
+  z-index: 3;
+  font-size: 25px;
+}
+.title .full {
+  position: absolute;
+  display: none;
+  font-size: 25px;
+  bottom: 36px;
+  right: 22px;
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: unset;
+}
+.title .divheart:hover {
+  cursor: pointer;
+}
+.title .divheart:hover .full {
+  display: block;
+  transition-timing-function: ease-in;
+}
+.title .divheart:hover .empty {
+  display: none;
+  transition-timing-function: ease-in;
+}
 
 .mainsection {
-  border-radius: 30px 30px 0 0;
   background: #faf9f9;
   padding: 0 5%;
   display: flex;
@@ -329,9 +370,81 @@ header img {
   margin-bottom: 60px;
 }
 
-main img {
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   width: 100%;
-  object-fit: cover;
+  height: 370px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.hero .title {
+  background-color: #faf9f9;
+  border-radius: 30px 30px 0 0;
+  padding: 25px 3%;
+  font-family: "Shrikhand";
+  font-size: 22px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero .title h1 {
+  font-weight: 100;
+}
+.hero .title .divheart {
+  width: 5%;
+}
+.hero .title .empty {
+  position: absolute;
+  color: black;
+  background: white;
+  display: block;
+  bottom: 39px;
+  right: 22px;
+  z-index: 3;
+  font-size: 25px;
+}
+.hero .title .full {
+  position: absolute;
+  display: none;
+  font-size: 25px;
+  bottom: 36px;
+  right: 22px;
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: unset;
+}
+.hero .title .divheart:hover {
+  cursor: pointer;
+}
+.hero .title .divheart:hover .full {
+  display: block;
+  transition-timing-function: ease-in;
+}
+.hero .title .divheart:hover .empty {
+  display: none;
+  transition-timing-function: ease-in;
+}
+
+.leDeliceDesSens {
+  background-image: url("../../../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.laPaletteDuGout {
+  background-image: url("../../../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.laNoteEnchantee {
+  background-image: url("../../../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.aLaFrancaise {
+  background-image: url("../../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 .menu_section {

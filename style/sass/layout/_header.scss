@@ -1,12 +1,16 @@
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 5%;
+  
   .arrowback{
-    align-self: baseline;
-    justify-self: flex-start;
+    color: black;
+    margin-right: auto;
+    font-size: 20px;
   }
   img {
+    margin-right: auto;
     width: 55%;
   }
 }
