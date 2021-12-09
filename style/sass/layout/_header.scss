@@ -3,14 +3,14 @@ header {
   justify-content: center;
   align-items: center;
   padding: 5%;
-  
+
   .arrowback{
+    left: 25px;
+    position: absolute;
     color: black;
-    margin-right: auto;
-    font-size: 20px;
+    font-size: 24px;
   }
   img {
-    margin-right: auto;
     width: 55%;
   }
 }
