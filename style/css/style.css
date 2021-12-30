@@ -311,6 +311,7 @@ header img {
   border-radius: 25px 25px 0 0;
   padding: 25px 3%;
   font-family: "Shrikhand";
+  width: 94%;
   font-size: 22px;
   position: relative;
   display: flex;
@@ -358,24 +359,37 @@ header img {
   transition-timing-function: ease-in;
 }
 
+@media screen and (min-width: 640px) {
+  .title {
+    justify-content: center;
+  }
+}
 main {
   background: #faf9f9;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 main .mainsection {
+  background: #faf9f9;
   padding: 0 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main button {
+  width: 50%;
   color: white;
   padding: 4% 13%;
   margin-bottom: 60px;
 }
 
 @media screen and (min-width: 640px) {
-  .mainsection {
+  main {
+    display: unset;
+  }
+  main .mainsection {
+    justify-content: space-between;
     flex-direction: row;
   }
 }
@@ -394,6 +408,7 @@ main button {
   border-radius: 25px 25px 0 0;
   padding: 25px 3%;
   font-family: "Shrikhand";
+  width: 94%;
   font-size: 22px;
   position: relative;
   display: flex;
@@ -440,6 +455,11 @@ main button {
   display: none;
   transition-timing-function: ease-in;
 }
+@media screen and (min-width: 640px) {
+  .hero .title {
+    justify-content: center;
+  }
+}
 
 .leDeliceDesSens {
   background-image: url("../../../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
@@ -479,6 +499,14 @@ main button {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 640px) {
+  .menu_section {
+    width: 24%;
+    padding: 3%;
+    border-radius: 20px;
+    border: white solid 10px;
+  }
+}
 article {
   background: white;
   box-shadow: 3px -1px 15px -2px rgba(0, 0, 0, 0.1);
@@ -495,7 +523,7 @@ article .article_info {
   flex-wrap: wrap;
 }
 article .article_info h3 {
-  width: 90%;
+  width: 100%;
   padding-right: 40px;
   font-size: 18px;
 }
