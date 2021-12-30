@@ -306,8 +306,9 @@ header img {
   }
 }
 .title {
+  margin-top: -40px;
   background-color: #faf9f9;
-  border-radius: 30px 30px 0 0;
+  border-radius: 25px 25px 0 0;
   padding: 25px 3%;
   font-family: "Shrikhand";
   font-size: 22px;
@@ -357,19 +358,27 @@ header img {
   transition-timing-function: ease-in;
 }
 
-.mainsection {
+main {
   background: #faf9f9;
-  padding: 0 5%;
+  justify-content: center;
+}
+main .mainsection {
+  padding: 0 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.mainsection button {
+main button {
   color: white;
   padding: 4% 13%;
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 640px) {
+  .mainsection {
+    flex-direction: row;
+  }
+}
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -380,8 +389,9 @@ header img {
   flex-direction: column-reverse;
 }
 .hero .title {
+  margin-top: -40px;
   background-color: #faf9f9;
-  border-radius: 30px 30px 0 0;
+  border-radius: 25px 25px 0 0;
   padding: 25px 3%;
   font-family: "Shrikhand";
   font-size: 22px;
@@ -449,17 +459,18 @@ header img {
 
 .menu_section {
   width: 100%;
-  padding: 5%;
+  padding: 5% 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .menu_section h2 {
   align-self: flex-start;
   font-weight: 300;
   font-size: 20px;
+  margin-left: 5px;
 }
 .menu_section hr {
+  margin-left: 5px;
   width: 15%;
   height: 3px;
   border: none;
@@ -468,33 +479,69 @@ header img {
   margin-bottom: 20px;
 }
 
-.menu_card {
+article {
   background: white;
-  width: 100%;
-  height: 60px;
   box-shadow: 3px -1px 15px -2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 3%;
   margin-bottom: 30px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
 }
-.menu_card .menu_info {
+article .article_info {
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+article .article_info h3 {
   width: 90%;
+  padding-right: 40px;
+  font-size: 18px;
+}
+article .article_info .bottomcard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+article .article_info .bottomcard p {
+  font-size: 16px;
+  margin: 3% 0 0 0;
+}
+article .article_info .bottomcard span {
+  margin: 0 10px;
+  font-weight: 500;
+}
+article .article_selected {
+  transition: 0.7s;
+  display: flex;
+  background-color: #99e2d0;
+  width: 0px;
+  justify-content: center;
   align-items: center;
 }
-.menu_card .menu_info h3 {
-  font-weight: 550;
-  padding: 0;
-  margin: 0;
+article .article_selected i {
+  display: none;
+  font-size: 20px;
+  color: white;
 }
-.menu_card .menu_info p {
-  font-weight: 100;
-  padding: 5px 0;
-  margin: 0;
+
+article:hover .article_selected {
+  border-radius: 0 20px 20px 0;
+  width: 1px;
+  padding: 0 12%;
 }
-.menu_card span {
-  align-self: flex-end;
+article:hover .article_selected i {
+  display: unset;
+}
+article:hover .article_info .bottomcard {
+  width: 90%;
+}
+article:hover .article_info .bottomcard p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #Footer_title {
