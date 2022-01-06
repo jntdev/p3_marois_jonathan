@@ -1,70 +1,68 @@
 .fonctionnement {
-  padding: 8% 2%;
-  h2 {
-    padding: 8% 4%;
-  }
-  .notice_cards_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .notice_card {
-    background: $greyColor;
-    position: relative;
-    width: 85%;
-    padding: 3% 3%;
-    border-radius: 25px;
-    align-items: center;
-    display: flex;
-    margin-bottom: 25px;
-    box-shadow: 5px 5px 15px -4px #0000002d;
-
-    p {
-      width: 80%;
-      font-size: 18px;
-      font-weight: bold;
+    padding: 8% 2%;
+    h2 {
+        padding: 8% 4%;
     }
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      border-radius: 50%;
-      background: $primarycolor;
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      left: -10px;
-      top: 30px;
-    }
-    i {
-      display: flex;
-      justify-content: center;
-      width: 30%;
-    }
-  }
-  .notice_card:hover {
-    background-color: transparentize($primarycolor, 0.9);
-    i {
-      color: $primarycolor;
-    }
-  }
-}
-@media screen and (min-width: 640px) {
-  .fonctionnement {
-    padding: 0;
     .notice_cards_container {
-      flex-direction: row;
-      justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .notice_card {
-      padding: 1%;
-      width: 25%;
+        background: $greyColor;
+        position: relative;
+        width: 85%;
+        padding: 3% 3%;
+        border-radius: 25px;
+        align-items: center;
+        display: flex;
+        margin-bottom: 25px;
+        box-shadow: 5px 5px 15px -4px #0000002d;
+        p {
+            width: 80%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 50%;
+            background: $primarycolor;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: -10px;
+            top: 30px;
+        }
+        i {
+            display: flex;
+            justify-content: center;
+            width: 30%;
+        }
     }
-    h2 {
-      padding: 8% 0;
+    .notice_card:hover {
+        background-color: transparentize($primarycolor, 0.9);
+        i {
+            color: $primarycolor;
+        }
     }
-  }
-  
+}
+
+@media screen and (min-width: 640px) {
+    .fonctionnement {
+        padding: 0;
+        .notice_cards_container {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .notice_card {
+            padding: 1%;
+            width: 25%;
+        }
+        h2 {
+            padding: 8% 4%;
+        }
+    }
 }

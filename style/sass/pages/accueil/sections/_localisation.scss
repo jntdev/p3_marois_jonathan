@@ -1,21 +1,22 @@
 .localisation {
-  background: rgb(233, 232, 232);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  input {
-    text-align: center;
-    font-size: 18px;
-    padding: 5% 0;
-    background: transparent;
-    border: none;
-  }
+    background: rgb(233, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    input {
+        text-align: center;
+        font-size: 18px;
+        padding: 5% 0;
+        background: transparent;
+        border: none;
+    }
 }
 
 @media screen and (min-width: 640px) {
-  .localisation {
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 25px;
-  }
+    .localisation {
+        width: 40%;
+        margin: 0 auto;
+        border-radius: 25px;
+    }
 }
