@@ -1,76 +1,67 @@
-article{
-  background: white;
-  box-shadow: $box-shadow;
-  border-radius: $box-radius;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  //flex-wrap: wrap;
-  align-items: stretch;
-  .article_info{
-    padding: 3%;
+article {
+    background: white;
+    box-shadow: $box-shadow;
+    border-radius: $box-radius;
+    margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    h3 {
-      width: 100%;
-      padding-right: 40px;
-      font-size: 18px;
+    overflow: hidden;
+    //flex-wrap: wrap;
+    //align-items: stretch;
+    .article_info {
+        width: 100%;
+        padding: 3%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        h3 {
+            width: 100%;
+            padding-right: 40px;
+            font-size: 18px;
+        }
+        p {
+            width: 80%;
+            font-size: 16px;
+            margin: 10px 0 0 0;
+        }
+        span {
+            font-weight: 500;
+        }
     }
-    .bottomcard{
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      width: 100%;
-      p{
-        font-size: 16px;
-         margin: 3% 0 0 0;
-      }
-      span{
-        margin: 0 10px;
-        font-weight: 500;
-      }
+    .article_selected {
+        transition: 0.7s;
+        display: flex;
+        background-color: $thirdColor;
+        width: 0px;
+        justify-content: center;
+        align-items: center;
+        i {
+            display: none;
+            font-size: 20px;
+            color: white;
+        }
     }
-    
-  }
-  .article_selected{
-    transition: 0.7s;
-    display: flex;
-    background-color: $thirdColor;
-    width: 0px;
-    justify-content: center;
-    align-items: center;
-    i{
-      display: none;
-      font-size: 20px;
-      color: white;
-    }
-  }
 }
 
-article:hover{
-  .article_selected{
-
-    border-radius: 0 20px 20px 0;
-    width: 1px;
-    padding: 0 12%;
-    i{
-      display: unset;
+article:hover {
+    .article_selected {
+        border-radius: 0 20px 20px 0;
+        width: 20%;
+        i {
+            display: unset;
+        }
     }
-  }
-  .article_info{
-    .bottomcard{
-      width: 90%;
-      p{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
+    .article_info {
+        h3 {
+            width: 80%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p {
+            width: 60%;
+        }
+        // .bottomcard {
+        //     width: 90%;
+        // }
     }
-    
-  }
-
-  
-
 }
-  

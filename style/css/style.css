@@ -530,32 +530,26 @@ article {
   border-radius: 20px;
   margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  overflow: hidden;
 }
 article .article_info {
+  width: 100%;
   padding: 3%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: baseline;
 }
 article .article_info h3 {
   width: 100%;
   padding-right: 40px;
   font-size: 18px;
 }
-article .article_info .bottomcard {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-}
-article .article_info .bottomcard p {
+article .article_info p {
+  width: 80%;
   font-size: 16px;
-  margin: 3% 0 0 0;
+  margin: 10px 0 0 0;
 }
-article .article_info .bottomcard span {
-  margin: 0 10px;
+article .article_info span {
   font-weight: 500;
 }
 article .article_selected {
@@ -574,19 +568,19 @@ article .article_selected i {
 
 article:hover .article_selected {
   border-radius: 0 20px 20px 0;
-  width: 1px;
-  padding: 0 12%;
+  width: 20%;
 }
 article:hover .article_selected i {
   display: unset;
 }
-article:hover .article_info .bottomcard {
-  width: 90%;
-}
-article:hover .article_info .bottomcard p {
+article:hover .article_info h3 {
+  width: 80%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+article:hover .article_info p {
+  width: 60%;
 }
 
 #Footer_title {
