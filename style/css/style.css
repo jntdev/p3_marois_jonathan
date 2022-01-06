@@ -545,7 +545,7 @@ article .article_info h3 {
   font-size: 18px;
 }
 article .article_info p {
-  width: 80%;
+  width: 90%;
   font-size: 16px;
   margin: 10px 0 0 0;
 }
@@ -571,16 +571,19 @@ article:hover .article_selected {
   width: 20%;
 }
 article:hover .article_selected i {
-  display: unset;
+  display: block;
+}
+article:hover .article_info {
+  width: 80%;
 }
 article:hover .article_info h3 {
-  width: 80%;
+  width: 90%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 article:hover .article_info p {
-  width: 60%;
+  width: 90%;
 }
 
 #Footer_title {

@@ -19,7 +19,7 @@ article {
             font-size: 18px;
         }
         p {
-            width: 80%;
+            width: 90%;
             font-size: 16px;
             margin: 10px 0 0 0;
         }
@@ -47,18 +47,19 @@ article:hover {
         border-radius: 0 20px 20px 0;
         width: 20%;
         i {
-            display: unset;
+            display: block;
         }
     }
     .article_info {
+        width: 80%;
         h3 {
-            width: 80%;
+            width: 90%;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         p {
-            width: 60%;
+            width: 90%;
         }
         // .bottomcard {
         //     width: 90%;
