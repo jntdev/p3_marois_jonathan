@@ -12,23 +12,30 @@ article {
         padding: 3%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        transition: width 400ms;
         align-items: baseline;
         h3 {
             width: 100%;
             padding-right: 40px;
             font-size: 18px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         p {
             width: 90%;
             font-size: 16px;
             margin: 10px 0 0 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         span {
             font-weight: 500;
         }
     }
     .article_selected {
-        transition: 0.7s;
         display: flex;
         background-color: $thirdColor;
         width: 0px;
@@ -45,24 +52,22 @@ article {
 article:hover {
     .article_selected {
         border-radius: 0 20px 20px 0;
-        width: 20%;
+        width: 80px;
+        transition: width 400ms;
         i {
             display: block;
         }
     }
     .article_info {
-        width: 80%;
+        width: 75%;
         h3 {
             width: 90%;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
         p {
             width: 90%;
         }
-        // .bottomcard {
-        //     width: 90%;
-        // }
+        .bottomcard {
+            width: 90%;
+        }
     }
 }

@@ -1,31 +1,23 @@
 //./dart-sass/sass ./style/sass/style.scss ./style/css/style.css --watch
-
 @import "abstracts/variables/colors";
 @import "abstracts/variables/box";
 @import "abstracts/variables/typography";
 @import "base/rules";
 @import "components/button";
-
+@import "components/loader_pop";
 // -----------Header-----------
-
 @import "layout/header";
-
 // -----------Page Principale-----------
-
 @import "pages/accueil/sections/localisation";
 @import "pages/accueil/sections/with_aside";
 @import "pages/accueil/sections/discover_index";
 @import "pages/accueil/sections/fonctionnement_index";
 @import "pages/accueil/sections/restaurant_list";
-
 // -----------Page restaurant-----------
-
 @import "pages/restaurant/title";
 @import "pages/restaurant/mainsection";
 @import "pages/restaurant/hero";
 @import "pages/restaurant/menu_section";
 @import "components/menu_card";
-
 // -----------Footer-----------
-
 @import "layout/footer";

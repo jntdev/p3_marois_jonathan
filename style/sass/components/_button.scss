@@ -1,4 +1,5 @@
 button {
+    cursor: pointer;
     padding: 6% 10%;
     border-radius: 100px;
     border: none;
@@ -12,4 +13,9 @@ button {
     padding: 4% 13%;
     margin-bottom: 60px;
     align-self: center;
+}
+
+button:hover {
+    background: linear-gradient($secondaryColor-hovered, $primarycolor-hovered);
+    box-shadow: $box-shadow-hovered;
 }

@@ -1,0 +1,66 @@
+.loader_pop {
+    position: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-out 3s linear;
+    opacity: 0;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    border-left: solid 10px $thirdColor;
+    border-top: solid 10px $thirdColor;
+    border-radius: 50%;
+    animation: tourne 2s linear;
+}
+
+@keyframes tourne {
+    0% {
+        border-left: solid 10px $secondaryColor;
+        border-top: solid 10px $secondaryColor;
+        transform: rotate(0deg);
+    }
+    33% {
+        border-left: solid 10px $thirdColor;
+        border-top: solid 10px $thirdColor;
+        transform: rotate(360deg);
+    }
+    66% {
+        border-left: solid 10px $secondaryColor;
+        border-top: solid 10px $secondaryColor;
+        transform: rotate(720deg);
+    }
+    100% {
+        border-left: solid 10px $thirdColor;
+        border-top: solid 10px $thirdColor;
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        position: absolute;
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+        top: 0;
+    }
+    99% {
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        position: unset;
+    }
+}
