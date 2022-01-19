@@ -1,3 +1,22 @@
+@keyframes fade-in {
+    0% {}
+    33% {
+        border-left: solid 10px $thirdColor;
+        border-top: solid 10px $thirdColor;
+        transform: rotate(360deg);
+    }
+    66% {
+        border-left: solid 10px $secondaryColor;
+        border-top: solid 10px $secondaryColor;
+        transform: rotate(720deg);
+    }
+    100% {
+        border-left: solid 10px $thirdColor;
+        border-top: solid 10px $thirdColor;
+        transform: rotate(1080deg);
+    }
+}
+
 article {
     background: white;
     box-shadow: $box-shadow;
@@ -5,25 +24,23 @@ article {
     margin-bottom: 30px;
     display: flex;
     overflow: hidden;
-    //flex-wrap: wrap;
-    //align-items: stretch;
     .article_info {
         width: 100%;
         padding: 3%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         transition: width 400ms;
         align-items: baseline;
         h3 {
             width: 100%;
-            padding-right: 40px;
             font-size: 18px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         p {
+            transition: width 400ms;
             width: 90%;
             font-size: 16px;
             margin: 10px 0 0 0;
@@ -52,7 +69,7 @@ article {
 article:hover {
     .article_selected {
         border-radius: 0 20px 20px 0;
-        width: 80px;
+        width: 20%;
         transition: width 400ms;
         i {
             display: block;
@@ -60,14 +77,30 @@ article:hover {
     }
     .article_info {
         width: 75%;
-        h3 {
-            width: 90%;
-        }
         p {
-            width: 90%;
+            transition: width 400ms;
+            width: 50%;
         }
-        .bottomcard {
-            width: 90%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    article {
+        .article_info {
+            p {
+                font-size: 22px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            span {
+                font-size: 22px;
+            }
+        }
+        .article_selected {
+            i {
+                font-size: 26px;
+            }
         }
     }
 }

@@ -445,6 +445,9 @@ header img {
   .title {
     justify-content: center;
   }
+  .title h1 {
+    font-size: 35px;
+  }
 }
 main {
   display: flex;
@@ -462,7 +465,7 @@ main {
   align-items: center;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1476px) {
   main {
     border-radius: 0 0 25px 25px;
   }
@@ -543,6 +546,9 @@ main {
   .hero .title {
     justify-content: center;
   }
+  .hero .title h1 {
+    font-size: 35px;
+  }
 }
 
 .leDeliceDesSens {
@@ -561,7 +567,7 @@ main {
   background-image: url("../../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1476px) {
   .hero {
     background-attachment: fixed;
     height: 600px;
@@ -589,12 +595,34 @@ main {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1476px) {
   .menu_section {
     width: 24%;
     padding: 3%;
     border-radius: 20px;
     border: white solid 10px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu_section h2 {
+    font-size: 30px;
+  }
+}
+@keyframes fade-in {
+  33% {
+    border-left: solid 10px #99e2d0;
+    border-top: solid 10px #99e2d0;
+    transform: rotate(360deg);
+  }
+  66% {
+    border-left: solid 10px #ff79da;
+    border-top: solid 10px #ff79da;
+    transform: rotate(720deg);
+  }
+  100% {
+    border-left: solid 10px #99e2d0;
+    border-top: solid 10px #99e2d0;
+    transform: rotate(1080deg);
   }
 }
 article {
@@ -610,19 +638,19 @@ article .article_info {
   padding: 3%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   transition: width 400ms;
   align-items: baseline;
 }
 article .article_info h3 {
   width: 100%;
-  padding-right: 40px;
   font-size: 18px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 article .article_info p {
+  transition: width 400ms;
   width: 90%;
   font-size: 16px;
   margin: 10px 0 0 0;
@@ -648,7 +676,7 @@ article .article_selected i {
 
 article:hover .article_selected {
   border-radius: 0 20px 20px 0;
-  width: 80px;
+  width: 20%;
   transition: width 400ms;
 }
 article:hover .article_selected i {
@@ -657,16 +685,25 @@ article:hover .article_selected i {
 article:hover .article_info {
   width: 75%;
 }
-article:hover .article_info h3 {
-  width: 90%;
-}
 article:hover .article_info p {
-  width: 90%;
-}
-article:hover .article_info .bottomcard {
-  width: 90%;
+  transition: width 400ms;
+  width: 50%;
 }
 
+@media screen and (min-width: 640px) {
+  article .article_info p {
+    font-size: 22px;
+  }
+  article .article_info h3 {
+    font-size: 24px;
+  }
+  article .article_info span {
+    font-size: 22px;
+  }
+  article .article_selected i {
+    font-size: 26px;
+  }
+}
 #Footer_title {
   color: white;
   font-size: 22px;
