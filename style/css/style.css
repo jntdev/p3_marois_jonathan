@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+.article_1 {
+  animation: reveal 0.7s cubic-bezier(0.13, 0.71, 0.27, 0.75);
+}
+
+.article_2 {
+  animation: reveal 1.4s cubic-bezier(0.13, 0.71, 0.27, 0.75);
+}
+
+.article_3 {
+  animation: reveal 2.1s cubic-bezier(0.13, 0.71, 0.27, 0.75);
+}
+
+@keyframes reveal {
+  0% {
+    margin-top: 30px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "roboto", sans-serif;
   padding: 0;
@@ -74,16 +95,14 @@ button:hover {
 }
 
 .loader {
-  width: 200px;
-  height: 200px;
-  border-left: solid 10px #99e2d0;
-  border-top: solid 10px #99e2d0;
   border-radius: 50%;
   animation: tourne 2s linear;
 }
 
 @keyframes tourne {
   0% {
+    width: 200px;
+    height: 200px;
     border-left: solid 10px #ff79da;
     border-top: solid 10px #ff79da;
     transform: rotate(0deg);
@@ -98,10 +117,16 @@ button:hover {
     border-top: solid 10px #ff79da;
     transform: rotate(720deg);
   }
+  99% {
+    width: 200px;
+    height: 200px;
+  }
   100% {
     border-left: solid 10px #99e2d0;
     border-top: solid 10px #99e2d0;
     transform: rotate(1080deg);
+    width: 0px;
+    height: 0px;
   }
 }
 @keyframes fade-out {
@@ -200,11 +225,11 @@ header img {
 @media screen and (min-width: 1200px) {
   .discover {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .discover button {
     margin-top: 0;
-    padding: 2%;
+    padding: 4%;
   }
 }
 .fonctionnement {
@@ -267,18 +292,20 @@ header img {
   .fonctionnement .notice_cards_container {
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: unset;
   }
   .fonctionnement .notice_card {
     padding: 1%;
     width: 25%;
+    min-width: 178px;
   }
   .fonctionnement h2 {
-    padding: 8% 4%;
+    padding: 8% 3%;
   }
 }
 .restaurant {
   background: #faf9f9;
-  padding: 7% 6%;
+  padding: 7% 5%;
   width: 90%;
 }
 .restaurant h2 {
@@ -384,7 +411,12 @@ header img {
   .restaurant .restaurant_list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 776px) {
+  .restaurant .restaurant_list {
+    justify-content: space-around;
   }
 }
 .title {
@@ -446,7 +478,20 @@ header img {
     justify-content: center;
   }
   .title h1 {
+    font-size: 40px;
+  }
+  .title .empty,
+.title .full {
     font-size: 35px;
+  }
+}
+@media screen and (min-width: 1476px) {
+  .title h1 {
+    font-size: 35px;
+  }
+  .title .empty,
+.title .full {
+    font-size: 30px;
   }
 }
 main {
@@ -547,7 +592,20 @@ main {
     justify-content: center;
   }
   .hero .title h1 {
+    font-size: 40px;
+  }
+  .hero .title .empty,
+.hero .title .full {
     font-size: 35px;
+  }
+}
+@media screen and (min-width: 1476px) {
+  .hero .title h1 {
+    font-size: 35px;
+  }
+  .hero .title .empty,
+.hero .title .full {
+    font-size: 30px;
   }
 }
 
@@ -569,8 +627,7 @@ main {
 
 @media screen and (min-width: 1476px) {
   .hero {
-    background-attachment: fixed;
-    height: 600px;
+    height: 500px;
   }
 }
 .menu_section {
@@ -595,6 +652,11 @@ main {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 640px) {
+  .menu_section h2 {
+    font-size: 30px;
+  }
+}
 @media screen and (min-width: 1476px) {
   .menu_section {
     width: 24%;
@@ -602,10 +664,8 @@ main {
     border-radius: 20px;
     border: white solid 10px;
   }
-}
-@media screen and (min-width: 640px) {
   .menu_section h2 {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 @keyframes fade-in {
@@ -702,6 +762,20 @@ article:hover .article_info p {
   }
   article .article_selected i {
     font-size: 26px;
+  }
+}
+@media screen and (min-width: 1476px) {
+  article .article_info p {
+    font-size: 16px;
+  }
+  article .article_info h3 {
+    font-size: 18px;
+  }
+  article .article_info span {
+    font-size: 18px;
+  }
+  article .article_selected i {
+    font-size: 20px;
   }
 }
 #Footer_title {

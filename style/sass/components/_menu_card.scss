@@ -104,3 +104,24 @@ article:hover {
         }
     }
 }
+
+@media screen and (min-width: 1476px) {
+    article {
+        .article_info {
+            p {
+                font-size: 16px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+        .article_selected {
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}

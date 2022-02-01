@@ -1,24 +1,32 @@
 .restaurant {
-    background: $greyColor;
-    padding: 7% 6%;
-    width: 90%;
-    h2 {
-        padding: 40px 0;
-    }
-    .restaurant_list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  background: $greyColor;
+  padding: 7% 5%;
+  width: 90%;
+  h2 {
+    padding: 40px 0;
+  }
+  .restaurant_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @import "../../../components/restaurant_card";
 @media screen and (min-width: 640px) {
-    .restaurant {
-        .restaurant_list {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+  .restaurant {
+    .restaurant_list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .restaurant {
+    .restaurant_list {
+      justify-content: space-around;
+    }
+  }
 }

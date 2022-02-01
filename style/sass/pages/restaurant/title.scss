@@ -56,7 +56,23 @@
     .title {
         justify-content: center;
         h1 {
+            font-size: 40px;
+        }
+        .empty,
+        .full {
             font-size: 35px;
+        }
+    }
+}
+
+@media screen and (min-width: 1476px) {
+    .title {
+        h1 {
+            font-size: 35px;
+        }
+        .empty,
+        .full {
+            font-size: 30px;
         }
     }
 }

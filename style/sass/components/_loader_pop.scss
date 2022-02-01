@@ -13,16 +13,14 @@
 }
 
 .loader {
-    width: 200px;
-    height: 200px;
-    border-left: solid 10px $thirdColor;
-    border-top: solid 10px $thirdColor;
     border-radius: 50%;
     animation: tourne 2s linear;
 }
 
 @keyframes tourne {
     0% {
+        width: 200px;
+        height: 200px;
         border-left: solid 10px $secondaryColor;
         border-top: solid 10px $secondaryColor;
         transform: rotate(0deg);
@@ -37,10 +35,16 @@
         border-top: solid 10px $secondaryColor;
         transform: rotate(720deg);
     }
+    99% {
+        width: 200px;
+        height: 200px;
+    }
     100% {
         border-left: solid 10px $thirdColor;
         border-top: solid 10px $thirdColor;
         transform: rotate(1080deg);
+        width: 0px;
+        height: 0px;
     }
 }
 
