@@ -51,6 +51,14 @@
   }
 }
 
+@media screen and (max-width: 379px) {
+  .fonctionnement {
+    .notice_card {
+      min-height: 75px;
+    }
+  }
+}
+
 @media screen and (min-width: 640px) {
   .fonctionnement {
     padding: 0;

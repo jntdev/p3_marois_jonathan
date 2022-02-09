@@ -1,127 +1,129 @@
 @keyframes fade-in {
-    0% {}
-    33% {
-        border-left: solid 10px $thirdColor;
-        border-top: solid 10px $thirdColor;
-        transform: rotate(360deg);
-    }
-    66% {
-        border-left: solid 10px $secondaryColor;
-        border-top: solid 10px $secondaryColor;
-        transform: rotate(720deg);
-    }
-    100% {
-        border-left: solid 10px $thirdColor;
-        border-top: solid 10px $thirdColor;
-        transform: rotate(1080deg);
-    }
+  0% {
+  }
+  33% {
+    border-left: solid 10px $thirdColor;
+    border-top: solid 10px $thirdColor;
+    transform: rotate(360deg);
+  }
+  66% {
+    border-left: solid 10px $secondaryColor;
+    border-top: solid 10px $secondaryColor;
+    transform: rotate(720deg);
+  }
+  100% {
+    border-left: solid 10px $thirdColor;
+    border-top: solid 10px $thirdColor;
+    transform: rotate(1080deg);
+  }
 }
 
 article {
-    background: white;
-    box-shadow: $box-shadow;
-    border-radius: $box-radius;
-    margin-bottom: 30px;
+  background: white;
+  box-shadow: $box-shadow;
+  border-radius: $box-radius;
+  margin-bottom: 30px;
+  display: flex;
+  overflow: hidden;
+  .article_info {
+    width: 100%;
+    padding: 3%;
     display: flex;
-    overflow: hidden;
-    .article_info {
-        width: 100%;
-        padding: 3%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        transition: width 400ms;
-        align-items: baseline;
-        h3 {
-            width: 100%;
-            font-size: 18px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-        p {
-            transition: width 400ms;
-            width: 90%;
-            font-size: 16px;
-            margin: 10px 0 0 0;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-        span {
-            font-weight: 500;
-        }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: width 400ms;
+    align-items: baseline;
+    h3 {
+      width: 100%;
+      font-size: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
-    .article_selected {
-        display: flex;
-        background-color: $thirdColor;
-        width: 0px;
-        justify-content: center;
-        align-items: center;
-        i {
-            display: none;
-            font-size: 20px;
-            color: white;
-        }
+    p {
+      transition: width 400ms;
+      width: 90%;
+      font-size: 16px;
+      margin: 10px 0 0 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
+    span {
+      font-weight: 500;
+    }
+  }
+  .article_selected {
+    display: flex;
+    background-color: $thirdColor;
+    width: 0px;
+    justify-content: center;
+    align-items: center;
+    i {
+      display: none;
+      font-size: 20px;
+      color: white;
+    }
+  }
 }
 
 article:hover {
-    .article_selected {
-        border-radius: 0 20px 20px 0;
-        width: 20%;
-        transition: width 400ms;
-        i {
-            display: block;
-        }
+  .article_selected {
+    border-radius: 0 20px 20px 0;
+    width: 20%;
+    transition: width 400ms;
+    i {
+      animation: rotation 0.7s linear;
+      display: block;
     }
-    .article_info {
-        width: 75%;
-        p {
-            transition: width 400ms;
-            width: 50%;
-        }
+  }
+  .article_info {
+    width: 75%;
+    p {
+      transition: width 400ms;
+      width: 80%;
     }
+  }
 }
 
 @media screen and (min-width: 640px) {
-    article {
-        .article_info {
-            p {
-                font-size: 22px;
-            }
-            h3 {
-                font-size: 24px;
-            }
-            span {
-                font-size: 22px;
-            }
-        }
-        .article_selected {
-            i {
-                font-size: 26px;
-            }
-        }
+  article {
+    .article_info {
+      p {
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      span {
+        font-size: 22px;
+      }
     }
+    .article_selected {
+      i {
+        font-size: 26px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1476px) {
-    article {
-        .article_info {
-            p {
-                font-size: 16px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-            span {
-                font-size: 18px;
-            }
-        }
-        .article_selected {
-            i {
-                font-size: 20px;
-            }
-        }
+  article {
+    .article_info {
+      p {
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      span {
+        font-size: 18px;
+      }
     }
+    .article_selected {
+      i {
+        font-size: 20px;
+      }
+    }
+  }
 }

@@ -25,6 +25,17 @@
     opacity: 1;
   }
 }
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  99% {
+    transform: rotate(720deg);
+  }
+}
 body {
   font-family: "roboto", sans-serif;
   padding: 0;
@@ -289,6 +300,11 @@ header img {
   color: #9356dc;
 }
 
+@media screen and (max-width: 379px) {
+  .fonctionnement .notice_card {
+    min-height: 75px;
+  }
+}
 @media screen and (min-width: 640px) {
   .fonctionnement {
     padding: 0;
@@ -744,6 +760,7 @@ article:hover .article_selected {
   transition: width 400ms;
 }
 article:hover .article_selected i {
+  animation: rotation 0.7s linear;
   display: block;
 }
 article:hover .article_info {
@@ -751,7 +768,7 @@ article:hover .article_info {
 }
 article:hover .article_info p {
   transition: width 400ms;
-  width: 50%;
+  width: 80%;
 }
 
 @media screen and (min-width: 640px) {
