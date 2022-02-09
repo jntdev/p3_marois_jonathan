@@ -36,6 +36,56 @@
     transform: rotate(720deg);
   }
 }
+@keyframes tourne {
+  0% {
+    width: 200px;
+    height: 200px;
+    border-left: solid 10px #ff79da;
+    border-top: solid 10px #ff79da;
+    transform: rotate(0deg);
+  }
+  33% {
+    border-left: solid 10px #99e2d0;
+    border-top: solid 10px #99e2d0;
+    transform: rotate(360deg);
+  }
+  66% {
+    border-left: solid 10px #ff79da;
+    border-top: solid 10px #ff79da;
+    transform: rotate(720deg);
+  }
+  99% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    border-left: solid 10px #99e2d0;
+    border-top: solid 10px #99e2d0;
+    transform: rotate(1080deg);
+    width: 0px;
+    height: 0px;
+  }
+}
+@keyframes fade-out {
+  0% {
+    position: absolute;
+    opacity: 1;
+    transform: scale(1);
+    right: 0;
+    top: 0;
+  }
+  99% {
+    opacity: 1;
+    transform: scale(1);
+    right: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    position: unset;
+  }
+}
 body {
   font-family: "roboto", sans-serif;
   padding: 0;
@@ -114,56 +164,6 @@ button:hover {
   animation: tourne 2s linear;
 }
 
-@keyframes tourne {
-  0% {
-    width: 200px;
-    height: 200px;
-    border-left: solid 10px #ff79da;
-    border-top: solid 10px #ff79da;
-    transform: rotate(0deg);
-  }
-  33% {
-    border-left: solid 10px #99e2d0;
-    border-top: solid 10px #99e2d0;
-    transform: rotate(360deg);
-  }
-  66% {
-    border-left: solid 10px #ff79da;
-    border-top: solid 10px #ff79da;
-    transform: rotate(720deg);
-  }
-  99% {
-    width: 200px;
-    height: 200px;
-  }
-  100% {
-    border-left: solid 10px #99e2d0;
-    border-top: solid 10px #99e2d0;
-    transform: rotate(1080deg);
-    width: 0px;
-    height: 0px;
-  }
-}
-@keyframes fade-out {
-  0% {
-    position: absolute;
-    opacity: 1;
-    transform: scale(1);
-    right: 0;
-    top: 0;
-  }
-  99% {
-    opacity: 1;
-    transform: scale(1);
-    right: 0;
-    top: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
-    position: unset;
-  }
-}
 header {
   display: flex;
   justify-content: center;
