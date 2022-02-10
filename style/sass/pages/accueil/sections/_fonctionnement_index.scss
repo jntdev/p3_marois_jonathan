@@ -30,7 +30,7 @@
       align-items: center;
       color: white;
       border-radius: 50%;
-      background: $primarycolor;
+      background: $primaryColor;
       width: 25px;
       height: 25px;
       position: absolute;
@@ -44,9 +44,9 @@
     }
   }
   .notice_card:hover {
-    background-color: transparentize($primarycolor, 0.9);
+    background-color: transparentize($primaryColor, 0.9);
     i {
-      color: $primarycolor;
+      color: $primaryColor;
     }
   }
 }

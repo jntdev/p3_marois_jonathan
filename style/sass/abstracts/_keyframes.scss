@@ -1,5 +1,4 @@
 // animation des articles du menu
-
 @for $i from 1 through 4 {
   .article_#{$i} {
     animation: reveal 0.7s * $i cubic-bezier(0.13, 0.71, 0.27, 0.75);
@@ -17,7 +16,6 @@
 }
 
 // animation du iframe au hover d'un menu-card
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -31,8 +29,7 @@
 }
 
 // animation du loader
-
-@keyframes tourne {
+@keyframes loading {
   0% {
     width: 200px;
     height: 200px;

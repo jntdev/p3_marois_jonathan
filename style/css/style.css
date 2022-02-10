@@ -36,7 +36,7 @@
     transform: rotate(720deg);
   }
 }
-@keyframes tourne {
+@keyframes loading {
   0% {
     width: 200px;
     height: 200px;
@@ -161,22 +161,22 @@ button:hover {
 
 .loader {
   border-radius: 50%;
-  animation: tourne 2s linear;
+  animation: loading 2s linear;
 }
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 5%;
 }
 header .arrowback {
-  left: 25px;
-  position: absolute;
   color: black;
   font-size: 24px;
+  align-self: center;
 }
 header img {
+  margin: auto;
   width: 55%;
 }
 
@@ -449,7 +449,6 @@ header img {
   font-size: 22px;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .title h1 {
@@ -551,82 +550,6 @@ main {
   background-position: 20% 50%;
   width: 100%;
   height: 370px;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.hero .title {
-  margin-top: -40px;
-  background-color: #faf9f9;
-  border-radius: 25px 25px 0 0;
-  padding: 25px 3%;
-  font-family: "Shrikhand";
-  width: 94%;
-  font-size: 22px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hero .title h1 {
-  font-weight: 100;
-}
-.hero .title .divheart {
-  width: 5%;
-}
-.hero .title .empty {
-  position: absolute;
-  color: black;
-  background: white;
-  display: block;
-  bottom: 39px;
-  right: 22px;
-  z-index: 3;
-  font-size: 25px;
-}
-.hero .title .full {
-  position: absolute;
-  display: none;
-  font-size: 25px;
-  bottom: 36px;
-  right: 22px;
-  background: -webkit-linear-gradient(#ff79da, #9356dc);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: unset;
-}
-.hero .title .divheart:hover {
-  cursor: pointer;
-}
-.hero .title .divheart:hover .full {
-  display: block;
-  transition-timing-function: ease-in;
-}
-.hero .title .divheart:hover .empty {
-  display: none;
-  transition-timing-function: ease-in;
-}
-@media screen and (min-width: 640px) {
-  .hero .title {
-    justify-content: center;
-  }
-  .hero .title h1 {
-    font-size: 40px;
-  }
-  .hero .title .empty,
-.hero .title .full {
-    font-size: 35px;
-  }
-}
-@media screen and (min-width: 1476px) {
-  .hero .title h1 {
-    font-size: 35px;
-  }
-  .hero .title .empty,
-.hero .title .full {
-    font-size: 30px;
-  }
 }
 
 .leDeliceDesSens {
@@ -686,23 +609,6 @@ main {
   }
   .menu_section h2 {
     font-size: 22px;
-  }
-}
-@keyframes fade-in {
-  33% {
-    border-left: solid 10px #99e2d0;
-    border-top: solid 10px #99e2d0;
-    transform: rotate(360deg);
-  }
-  66% {
-    border-left: solid 10px #ff79da;
-    border-top: solid 10px #ff79da;
-    transform: rotate(720deg);
-  }
-  100% {
-    border-left: solid 10px #99e2d0;
-    border-top: solid 10px #99e2d0;
-    transform: rotate(1080deg);
   }
 }
 article {
